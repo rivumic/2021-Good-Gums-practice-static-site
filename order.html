@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Home | Good Gums</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logoNav"><img class="logo" src="images/GoodGums-logo-sm.png" alt="Good Gums orange and green coloured tree Logo" /></a>
+        <nav>
+            <ul id="navContainer">
+                <li class="navButtons">
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="navButtons">
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li class="navButtons">
+                    <a class="current">Order</a>
+                </li>
+
+                <li class="navButtons">
+                    <a href="products.html">Products</a>
+                </li>
+
+                <li class="navButtons">
+                    <a href="sitemap.html">Sitemap</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <form method="get" action="response.html" id="orderForm">
+                <h2>Personal Details</h2>
+
+                <div class="formSection">
+
+                    <div class="field">
+                        <p>First Name:</p>
+                        <input type="text" name="firstName" id="firstName" required />
+                    </div>
+
+                    <div class="field">
+                        <p>Last Name:</p>
+                        <input type="text" name="lastName" id="lastName" required />
+                    </div>
+
+                    <div class="field">
+                        <p>Email:</p>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+
+                </div>
+
+                <h2>Address</h2>
+
+                <div class="formSection ">
+                    <div class="field">
+                        <p>Street Address:</p>
+                        <input type="text" name="streetAddress" id="streetAddress" required />
+                    </div>
+
+                    <div class="field">
+                        <p>Street Address 2:</p>
+                        <input type="text" name="streetAddress2" id="streetAddress2" />
+                    </div>
+
+                    <div class="field">
+                        <p>City</p>
+                        <input type="text" name="city" id="city" required />
+                    </div>
+
+                    <div class="field">
+                        <p>Country</p>
+                        <input type="text" name="country" id="country" value="Australia" readonly />
+                    </div>
+
+                    <div class="field">
+                        <p>Zip/Postal Code</p>
+                        <input type="text" name="zip" id="zip" required />
+                    </div>
+
+                    <div class="field">
+                        <p><label for="state">State</label></p>
+                        <select name="state" id="state" required>
+                            <option value="">Choose your state</option>
+                            <option value="ACT">ACT</option>
+                            <option value="QLD">Queensland</option>
+                            <option value="NSW">New South Wales</option>
+                            <option value="VIC">Victoria</option>
+                            <option value="NT">Northern Territory</option>
+                            <option value="SA">South Australia</option>
+                            <option value="WA">Western Australia</option>
+                            <option value="TAS">Tasmania</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h2><label>Product Delivery Method</label></h2>
+                <div class="flexLeft">
+                    <select name="deliveryMethod" required>
+                        <option value="">Pickup/Delivery Method</option>
+                        <option value="Standard Delivery (+$50)">Standard Delivery (+$50)</option>
+                        <option value="Expedited Delivery (+$100)">Expedited Delivery (+$100)</option>
+                        <option value="Pickup From Nursery (Free)">Pickup From Nursery (Free)</option>
+                    </select>
+
+                    <p>Order Details and Additional Shipping Instructions</p>
+                    <textarea name="extraInstructions"></textarea>
+                </div>
+
+                <h2>Have you made an order with us before?</h2>
+
+                <div class="formSection2 formSpacing">
+
+                    <label for="repeatCustYes">Yes</label>
+
+                    <label for="repeatCustYes" class="customRadio">
+                        <input type="radio" name="repeatCust" id="repeatCustYes" value="Yes" required />
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label for="repeatCustNo">No</label>
+
+                    <label for="repeatCustNo" class="customRadio">
+                        <input type="radio" name="repeatCust" id="repeatCustNo" value="No" checked />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="formSpacing">
+                    <label for="paperBill" id="paperLabel">Would you like a paper copy of your invoice included with your order?</label>
+                    <input type="checkbox" name="paperBill" id="paperBill" value="Yes" />
+                </div>
+
+                <button type="submit" value="submit" form="orderForm">Submit</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss"
+                     alt="Valid CSS!" />
+            </a>
+        </p>
+        © 2021 Good Gums<br />
+    </footer>
+</body>
+</html>

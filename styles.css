@@ -1,0 +1,625 @@
+﻿/*General*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: normal;
+    color: black;
+    scroll-behavior: smooth;
+}
+     
+footer{
+    background-color: rgb(245,245,245);
+}
+.wrapper{
+    margin-inline: auto;
+    width: min(90%, 1300px);
+}
+
+.center{
+    text-align: center;
+}
+
+/*layout for cards used on multiple pages*/
+.cardFlex {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px auto;
+    width: 450px;
+    max-width: 100%;
+    padding: 20px 20px;
+}
+
+.cardFlex--small{
+    width: 350px;
+}
+
+.dark{
+    background-color: rgb(245,245,245);
+}
+
+.cardFlex--big{
+        width: 600px;
+    }
+/*styles for background images*/
+.backgroundImage {
+        /*general*/
+        background-position: center;
+        background-size: cover;
+        /*concerned with gradient darkening with pseudo elements*/
+        
+    }
+/*Nav*/
+header {
+    background-color: rgb(245,245,245);
+    padding: 15px;
+    min-height: 106px;
+    text-align: center;
+}
+.logoNav{
+    display: inline-block;
+    max-width: 100%;
+    width: 300px;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+.logo{
+    max-width:100%;
+}
+nav {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+    text-align: center;
+}
+#navContainer {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+.navButtons {
+    display: inline-block;
+    margin: 25px;
+}
+
+.navButtons a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(80,80,80);
+}
+
+.navButtons a:hover{
+    color: rgb(147,205,130);
+    border-bottom: 1px solid black;
+}
+
+.navButtons .current{
+        border-bottom: 1px solid black;
+        color: black;
+    }
+
+/*Footer*/
+footer{
+    padding: 20px;
+    margin-top: 50px;
+}
+footer p{
+    padding-top: .5em;
+}
+
+/*Homepage*/
+
+/*Banner/Hero Image*/
+.hero {
+    width: 100%;
+    background-image: url('images/Plants/Acacia pycnantha/acacia-background-cropped.jpg');
+    font-size: 4em;
+    text-align: center;
+    padding: 7% 10px;
+}
+.heroSpan{
+    color: white;
+    max-width: 90%;
+}
+/*darkens image with gradient to improve text legibility*/
+.hero::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: 
+        linear-gradient(
+            0deg, rgb(0 0 0 / .4), rgb(0 0 0/ 0));
+}
+
+/*section containing cards about product collections*/
+.collectionsSection{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/*for background images in index and About Us*/
+.cardBackground {
+    padding: 35% 0;
+    font-size: 2rem;
+}
+.backgroundWithText {
+    color: white;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+}
+
+.collectionLinks{
+    text-decoration: none;
+}
+
+.collectionText{
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.inlineLinks{
+    font-family: inherit;
+}
+
+/*hover effects for collection pictures*/
+.cardHover:hover{
+    box-shadow: 0 0 10px 5px rgba(0,0,0, .25);
+    color: rgb(147,205,130);
+}
+
+/*gradient darkening for text legibility*/
+.backgroundWithText::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient( 0deg, rgb(0 0 0 / .4), rgb(0 0 0/ 0));
+    }
+
+/*background images for each card*/
+#smallPlants {
+    background-image: url('images/Plants/Anigozanthos flavidus/shutterstock_390107410_1.jpg');
+}
+#largePlants {
+    background-image: url('/images/Plants/Boronia serrulata/shutterstock_1181054476_1.jpg');
+}
+#Trees{
+        background-image: url('images/Plants/Eucalyptus caesia/shutterstock_144993751_1.jpg')
+    }
+
+/*About Us*/
+#teamInfo h1 {
+    font-size: 3em;
+    color: rgb(80,80,80);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: .75em;
+    font-weight: 600;
+}
+.aboutCardName{
+    font-size: 2.4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    padding: 2%;
+    color: rgb(80,80,80);
+}
+.aboutCardRole {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(80,80,80);
+}
+.staffInfo {
+    width: 800px;
+    max-width: 100%;
+    margin-inline: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.6em;
+    color: rgb(80,80,80);
+    line-height: 1.5;
+}
+/*Small Beginnings and Commitement to natives section*/
+    
+/*basic layout*/
+.split{
+    /*basic vertical layout for mobile and small widths*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 5em;
+    padding-block: 3em;
+}
+.splitText{
+    order: 1;
+}
+.split img{
+        max-width: 70%;
+    display: block;
+    margin-inline: auto;
+}
+.split h2{
+    font-size: 2.5em;
+color: rgb(80,80,80);
+margin-top: .75em;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: 600;
+padding: .35em;
+text-align: center;
+}
+.split p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.35em;
+    color: rgb(80,80,80);
+    line-height: 1.5;
+    padding: 1em;
+}
+/*layout for wider widths*/
+@media (min-width: 1250px){
+    .split{
+        flex-direction: row;
+    }
+    .split > *{
+        flex-basis: 100%;
+        order: 0;
+    }
+    .split img {
+        max-width: 100%;
+        display: block;
+        margin-inline: auto;
+    }
+}
+/*images for staff info section*/
+#daisy {
+    background-image: url(images/Staff/Daisy/shutterstock_1743340496_1.jpg);
+}
+#ivy{
+    background-image: url(images/Staff/Ivy/shutterstock_1498236446_1.jpg);
+
+}
+#jarred {
+    background-image: url(images/Staff/Jarred/shutterstock_1714666150_1.jpg);
+}
+#ren {
+    background-image: url(images/Staff/Ren/shutterstock_1667874196_1.jpg);
+}
+
+/*Order.html*/
+/*structure/layout*/
+.formSection2 {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+.formSpacing {
+    margin-bottom: 1.5em;
+}
+
+@media (min-width: 1250px) {
+    .formSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 1em;
+    }
+
+    .formSection2 {
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+    }
+
+    .field {
+        width: 30%;
+    }
+
+    .flexLeft {
+        justify-content: space-between;
+    }
+
+    form select {
+        width: 100%;
+    }
+}
+/*text formatting/padding etc.*/
+form{
+    margin-bottom:5em;
+    color: rgb(80,80,80);
+    font-size: 1.4em;
+}
+form input[type=text], form input[type=email], form select, form textarea{
+    padding: .5em;
+    margin-bottom: .5em;
+    width: 100%;
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid rgb(240,154,39);
+}
+form > h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+form textarea{
+     height: 7em;
+}
+form p{
+    margin-bottom: .75em;
+}
+form button{
+    height: 50px;
+    width:200px;
+    border-radius: 25px;
+    border: 5px solid rgb(240,154,39);
+    font-size: 1.18em;
+    background: white;
+}
+#paperBill{
+    margin: 15px;
+}
+/*shadow effect for input fields*/
+input:hover, select:hover {
+    box-shadow: 0 0 10px 2px rgba(0,0,0, .1);
+}
+
+/*Custom Radio Buttons*/
+.customRadio{
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customRadio .checkmark {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    background-color: rgb(240,154,39);
+    display:none;
+}
+.customRadio input{
+    display: none;
+}
+.customRadio input:checked + .checkmark{
+    display: inline-block;
+}
+.lineUpRadio{
+    display: inline-block;
+}
+/*checkbox positioning*/
+form input[type=checkbox]{
+    width: 25px;
+    height: 25px;
+}
+form input[type=checkbox], #paperLabel{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*Sitemap*/
+.mainList a {
+    text-decoration: none;
+    color: rgb(80,80,80);
+}
+.sitemap .heading {
+    display: block;
+}  
+.sitemap h1{
+    text-align: center;
+    margin: 1em;
+    margin-bottom: 0;
+    font-size: 4em;
+    color: rgb(80,80,80);
+
+}
+.sitemap h2 {
+    color: rgb(80,80,80);
+    font-size: 3em;
+    text-decoration: underline;
+    padding: .75em 40px;
+}
+h2 span{
+        color: rgb(240,154,39);
+    }
+
+/*Accordion Functionality*/
+.subList{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.subList li {
+    font-size: 2em;
+    padding: .3em 40px;
+    color: rgb(80,80,80);
+    border: 2px rgb(240,154,39) solid;
+    display: inline-block;
+    margin: 4px 2px;
+}
+.subList li:hover{
+    background-color: rgb(240,154,39);
+}
+
+.accordion{
+    font-size: 1.5em;
+    color: rgb(80,80,80);
+    cursor: pointer;
+    background: white;
+    position: relative;
+    padding: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    transition: 0.1s;
+}
+
+.active{
+    background: rgb(240,154,39);
+}
+.accordion::before{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    margin-block: auto;
+}
+/*Products Page*/
+.productSection{
+    text-align: center;
+}
+.productSection h2{
+        color: rgb(80,80,80);
+        font-size: 3.5em;
+        padding: 1em;
+        text-align: center;
+    }
+.plantName{
+    padding: .5em;
+    font-size: 1.7em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(80,80,80);
+    font-weight: 600;
+}
+.plantSubName{
+    padding: .5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(80,80,80);
+}
+.plantDesc {
+    padding: .5em;
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(80,80,80);
+    line-height: 1.5;
+}
+
+/*smallPlants photo links with alternate photo on hover*/
+#anigozanth{
+    background-image: url('images/Plants/Anigozanthos flavidus/shutterstock_390107410_1.jpg');
+}
+#anigozanth:hover {
+    background-image: url('images/Plants/Anigozanthos flavidus/shutterstock_1788084995_1.jpg');
+}
+#correa {
+    background-image: url('images/Plants/Correa federation bell x mannii/shutterstock_1711478590_1.jpg');
+}
+    #correa:hover {
+        background-image: url('images/Plants/Correa federation bell x mannii/shutterstock_1716199645_1.jpg');
+    }
+#grevillea {
+background-image: url('images/Plants/Grevillea alpina x rosmarinifolia/shutterstock_1463973167_1.jpg');
+}
+    #grevillea:hover {
+        background-image: url('images/Plants/Grevillea alpina x rosmarinifolia/shutterstock_1418845589_1.jpg');
+    }
+#poa {
+    background-image: url('images/Plants/Poa labillardierei/shutterstock_374910508_1.jpg');
+}
+    #poa:hover {
+            background-image: url('images/Plants/Poa labillardierei/shutterstock_1791619955_1.jpg');
+        }
+/*largePlants photos*/
+#boronia {
+    background-image: url('images/Plants/Boronia serrulata/shutterstock_1181054476_1.jpg');
+}
+    #boronia:hover {
+        background-image: url('images/Plants/Boronia serrulata/shutterstock_1185578461_1.jpg');
+    }
+#hardenbergia {
+    background-image: url('images/Plants/Hardenbergia violacea/shutterstock_1791808445_1.jpg');
+}
+        #hardenbergia:hover {
+            background-image: url('images/Plants/Hardenbergia violacea/shutterstock_1675721635_1.jpg');
+        }
+#syzygium {
+    background-image: url('images/Plants/Syzygium smithii/shutterstock_1735075418_1.jpg');
+}
+    #syzygium:hover {
+        background-image: url('images/Plants/Syzygium smithii/shutterstock_1720832230 (1)_1.jpg');
+    }
+#telopea {
+    background-image: url('images/Plants/Telopea speciosissima/shutterstock_639385780_1.jpg');
+}
+    #telopea:hover {
+        background-image: url('images/Plants/Telopea speciosissima/shutterstock_1268838721_1.jpg');
+    }
+/*trees*/
+#acaciaPyc {
+    background-image: url('images/Plants/Acacia pycnantha/shutterstock_611904872_1.jpg');
+}
+    #acaciaPyc:hover {
+        background-image: url('images/Plants/Acacia pycnantha/shutterstock_1544034050_1.jpg');
+    }
+#angophora {
+    background-image: url('images/Plants/Angophora costata/shutterstock_1415738750_1.jpg');
+}
+    #angophora:hover {
+        background-image: url('images/Plants/Angophora costata/shutterstock_1595770927_1.jpg');
+    }
+
+#callistemon {
+    background-image: url('images/Plants/Callistemon citrinus/shutterstock_81971158_1.jpg');
+}
+    #callistemon:hover {
+        background-image: url('images/Plants/Callistemon citrinus/shutterstock_1774816355_1.jpg');
+    }
+
+#corymbia{
+    background-image: url('images/Plants/Corymbia ficifolia/shutterstock_1308004495_1.jpg');
+}
+    #corymbia:hover{
+        background-image: url('images/Plants/Corymbia ficifolia/shutterstock_1611871573_1.jpg');
+    }
+
+#eucalyptusC{
+background-image: url('images/Plants/Eucalyptus caesia/shutterstock_144993751_1.jpg');
+}
+
+    #eucalyptusC:hover {
+        background-image: url('images/Plants/Eucalyptus caesia/shutterstock_144993766_1.jpg');
+    }
+
+#eucalyptusP{
+    background-image: url('images/Plants/Eucalyptus pauciflora/shutterstock_1582478977 (1)_1.jpg');
+}
+    #eucalyptusP:hover {
+        background-image: url('images/Plants/Eucalyptus pauciflora/shutterstock_1114744187_1.jpg');
+    }
+
+#grevillia{
+    background-image: url('images/Plants/Grevillia robusta/shutterstock_1788006386_1.jpg');
+}
+    #grevillia:hover{
+            background-image: url('images/Plants/Grevillia robusta/shutterstock_514124533_1.jpg');
+        }
+
+/*response page*/
+    .responseFields{
+        font-size: 2em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height: 1.5;
+    }
+
+    .responseHeading{
+        font-size: 3em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 600;
+        padding: 1em;
+    }
+
+    .smallHeading{
+        font-weight: 600;
+        color: rgb(240,154,39);
+        text-decoration-line: underline;
+    }
